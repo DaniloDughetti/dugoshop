@@ -1,0 +1,2 @@
+# dugoshop
+Personal web shop
