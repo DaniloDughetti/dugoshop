@@ -14,8 +14,8 @@ services:
       - redis
     environment:
       DB_HOST: mysql
-      DB_DATABASE: laravel_docker
-      DB_USERNAME: app
+      DB_DATABASE: dugoshop_db
+      DB_USERNAME: root
       DB_PASSWORD: password
       REDIS_HOST: redis
       SESSION_DRIVER: redis
@@ -25,8 +25,8 @@ services:
     ports:
       - 13306:3306
     environment:
-      MYSQL_DATABASE: laravel_docker
-      MYSQL_USER: app
+      MYSQL_DATABASE: dugoshop_db
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
   redis:

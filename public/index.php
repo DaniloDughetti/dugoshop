@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/dugoshop.css" rel="stylesheet">
 
   </head>
 
@@ -20,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,13 +33,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="dughettidanilo.com">Go to blog</a>
             </li>
           </ul>
         </div>
@@ -49,22 +44,54 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-          <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+          <h1 class="mt-5">Per-order now the hottest 2018 t-shirt</h1>
+          <p class="lead">At 50k orders we'll start sending your idol t-shirt!</p>
           <ul class="list-unstyled">
-            <li>Bootstrap 4.1.3</li>
-            <li>jQuery 3.3.1</li>
+            <li><img class="tshirt" src="assets/images/tshirt.png"></li>
+            <li>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="input-email" aria-describedby="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="input-name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="input-surname" placeholder="Surname">
+              </div>
+              <div class="form-group">
+              <select class="form-control">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Pre-Order your awesome t-shirt now</button>
+            </form>
+            </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
   <?php
-echo 'yo';
+$servername = "mysql";
+$username = "root";
+$password = "password";
+
+try {
+    $conn = new PDO("mysql:host=$servername;port=3306;dbname=dugoshop_db", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
 ?>
 </html>
