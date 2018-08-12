@@ -12,12 +12,15 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/dugoshop.css?v=1.1" rel="stylesheet">
+    <link href="assets/styles/dugoshop.css?v=1.5" rel="stylesheet">
 
   <?php
     require('database/PreOrderUser.php');
     try{
       $preOrderUser = new PreOrderUser();
+      $progress = 90 + ($preOrderUser->getPreOrderUserNumber()/50);
+      $tshirtNumber = $progress * 500;
+      $tshirtLeft = 50000 - $tshirtNumber;
     } catch(Exception $e){
       die("ERROR: Could not connect. " . $e->getMessage());
     }
@@ -49,12 +52,23 @@
 
     <!-- Page Content -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
+<div class="raw">
+<div class="col-12 col-sm-12 col-md-14 col-lg-12 col-xl-12 text-center">
           <h1 class="mt-5 tshirt-title">Per-order now the hottest 2018 t-shirt</h1>
-          <p class="lead">At 50k orders we'll start sending your idol t-shirt!</p>
-          <ul class="list-unstyled">
-            <li><img class="tshirt" src="assets/images/tshirt.png"></li>
+          <p class="lead">At 50k orders we'll start sending your idol t-shirt! <span class="badge badge-primary"><?php 
+          echo $tshirtLeft . ' left!';
+          ?></span></p>
+          </div>
+</div>
+
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+        <img class="tshirt" src="assets/images/tshirt.png">
+           
+           
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+        <ul class="list-unstyled preorderuser-tshirt">
             <li>
             <form>
               <div class="form-group">
@@ -76,18 +90,23 @@
               <button type="submit" class="btn btn-primary">Pre-Order your awesome t-shirt now</button>
             </form>
             </li>
-
-            <li>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated"  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" 
-              style="width: <?php 
-              $progress = 90 + ($preOrderUser->getPreOrderUserNumber()/50);
-              echo $progress . '%' ?>"></div>
-            </div>
-            </li>
           </ul>
         </div>
       </div>
+
+      <div class="raw">
+<div class="col-12 col-sm-12 col-md-14 col-lg-12 col-xl-12 text-center">
+          
+<div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated"  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" 
+              style="width: <?php
+              echo $progress . '%'; ?>"> 
+              <?php 
+              echo $tshirtNumber . ' tshirt preordered!' ; 
+              ?></div>
+            </div>
+</div>
+
     </div>
 
     <script src="vendor/jquery/jquery.min.js"></script>
