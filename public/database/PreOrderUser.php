@@ -21,6 +21,28 @@ class PreOrderUser {
         $result = $this->$pdo->query($sql);
         return $result->rowCount();
     }
+    
+    function insertPreOrderUser($email, $firstName, $lastName, $tshirtSize){
+        try{
+            $sql = "INSERT INTO PreOrderUser (email, firstName, lastName, shirtSize)
+            VALUES ('$email', '$firstName', '$lastName', '$tshirtSize');";   
+            $result = $this->$pdo->query($sql);
+            return $result;
+        }catch(Exception $e){
+            return false;
+        }
+       
+    }
+
+    function sendConfirmEmail($email){
+        $to = $email;
+        $subject = 'DugoShop | Your pre-order is submitter correctly!';
+        $message = 'Hello';
+        $headers = 'From: webmaster@example.com' . "\r\n" .
+                    'Reply-To: webmaster@example.com' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
+        mail($to, $subject, $message, $headers);
+    }
 }
 
 ?>
