@@ -7,7 +7,7 @@
     <meta name="author" content="Danilo Dughetti">
     <title>DugoShop</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/dugoshop.css?v=1.5" rel="stylesheet">
+    <link href="assets/styles/dugoshop.css?v=1.1" rel="stylesheet">
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     

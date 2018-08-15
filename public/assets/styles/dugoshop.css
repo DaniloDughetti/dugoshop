@@ -4,7 +4,7 @@
         font-size: 25px;
     }
     .navbar-brand{
-        max-width: 300px;
+        max-width: 210px;
     }
     .tshirt{
         max-width: 60%;
@@ -14,7 +14,8 @@
         max-width: 30% !important;
     }
     .progress{
-        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 35px;
     }
 }
     
@@ -31,7 +32,8 @@
         max-width: 30% !important;
     }
     .progress{
-        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 35px;
     }
 }
     
@@ -45,7 +47,8 @@
         max-width: 30% !important;
     }
     .progress{
-        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 35px;
     }
     .preorderuser-tshirt{
         margin-top: 100px;
@@ -62,7 +65,8 @@
         max-width: 30% !important;
     }
     .progress{
-        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 35px;
     }
     .preorderuser-tshirt{
         margin-top: 100px;
