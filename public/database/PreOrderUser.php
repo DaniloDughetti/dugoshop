@@ -6,9 +6,10 @@ class PreOrderUser {
     
     function __construct() {
         $servername = DB_SERVER_NAME;
+        $dbname = DB_NAME;
         $username = DB_USERNAME;
         $password = DB_PASSWORD;
-        $this->$pdo = new PDO("mysql:host=$servername;port=3306;dbname=dugoshop_db", $username, $password);
+        $this->$pdo = new PDO("mysql:host=$servername;port=3306;dbname=$dbname", $username, $password);
         $this->$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
