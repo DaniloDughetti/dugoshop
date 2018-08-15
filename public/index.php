@@ -19,7 +19,7 @@
         $tshirtNumber = $progress * 500;
         $tshirtLeft = 50000 - $tshirtNumber;
       } catch(Exception $e){
-        die("ERROR: Could not connect. " . $e->getMessage());
+        echo "ERROR: Could not connect. " . $e->getMessage();
       }
     ?>
   </head>
@@ -38,7 +38,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://dughettidanilo.com">Go to blog</a>
+              <a class="nav-link" href="http://dughettidanilo.com">Go to portfolio</a>
             </li>
           </ul>
         </div>
@@ -62,15 +62,15 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
           <ul class="list-unstyled preorderuser-tshirt">
             <li>
-              <form action="purchaseComplete.php" method="post" id="tshirt-form">
+              <form action="purchaseComplete.php" method="post" id="tshirt-form" data-toggle="validator">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="input-email" id="input-email" aria-describedby="email" placeholder="Email">
+                  <input type="email" class="form-control" name="input-email" id="input-email" aria-describedby="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="input-firstName" id="input-firstName" placeholder="First name">
+                  <input type="text" class="form-control" name="input-firstName" id="input-firstName" placeholder="First name" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="input-lastName" id="input-lastName" placeholder="Last name">
+                  <input type="text" class="form-control" name="input-lastName" id="input-lastName" placeholder="Last name" required>
                 </div>
                 <div class="form-group">
                   <select class="form-control" name="input-tshirtSize">

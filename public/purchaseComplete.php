@@ -30,7 +30,7 @@
           }
         }
       }catch(Exception $e){
-        
+        echo "Error " . $e->getMessage();
       }
       ?>    
 
@@ -55,7 +55,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://dughettidanilo.com">Go to blog</a>
+              <a class="nav-link" href="http://dughettidanilo.com">Go to portfolio</a>
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@
               echo "
               <div class=\"alert alert-success\" role=\"alert\">
                 <h4 class=\"alert-heading\">Well done $firstName!</h4>
-                  <p>Aww yeah, you successfully pre-ordered your awesome shirt and you will soon receive a confirmation email to $email</p>
+                  <p>Aww yeah, you successfully pre-ordered your awesome shirt and you will receive a confirmation email to $email when we'll reach 50k t-shirts pre-ordered</p>
                   <hr>
                   <p class=\"mb-0\"><b>Dugo is defenitively proud of you</b></p>
               </div>";
