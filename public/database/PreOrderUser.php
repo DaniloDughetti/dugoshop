@@ -35,10 +35,15 @@ class PreOrderUser {
        
     }
 
-    function sendConfirmEmail($email){
+    function sendConfirmEmail($email, $firstName){
         $to = $email;
         $subject = 'DugoShop | Your pre-order is submitter correctly!';
-        $message = 'Hello';
+        $message = '<h1>Thank you, ' . $firstName .'</h1>
+        <p>from now you know you are the object of respect and pride of the dugo.
+        If we ever reach the quota of 50 thousand pre-ordered t-shirts you will be 
+        contacted and you will know everything you need to make sure that it is yours.<br></p>
+        <p>Greetings</p>
+        <p>Dugo</p>';
         $headers = 'From: dugoshop@dughettidanilo.com' . "\r\n" .
                     'Reply-To: dugoshop@dughettidanilo.com' . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();

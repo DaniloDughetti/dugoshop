@@ -26,7 +26,7 @@
         if($isPostParamsInit){
           $isInsertDone = $preOrderUser->insertPreOrderUser($email, $firstName, $lastName, $tshirtSize);
           if($isInsertDone){
-            $preOrderUser->sendConfirmEmail($email);
+            $preOrderUser->sendConfirmEmail($email, $firstName);
           }
         }
       }catch(Exception $e){
