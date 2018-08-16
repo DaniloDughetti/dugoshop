@@ -93,7 +93,7 @@
               style="width: <?php
               echo $progress . '%'; ?>"> 
               <?php 
-              echo $tshirtNumber . ' t-shirts preordered!' ; 
+              echo $tshirtNumber . ' t-shirts pre-ordered!' ; 
               ?>
               </div>
             </div>
