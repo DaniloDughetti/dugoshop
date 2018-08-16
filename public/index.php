@@ -49,7 +49,7 @@
       <div class="raw">
         <div class="col-12 col-sm-12 col-md-14 col-lg-12 col-xl-12 text-center">
           <h1 class="mt-5 tshirt-title">Per-order now the hottest 2018 t-shirt</h1>
-          <p class="lead">At 50k orders we'll start sending your idol t-shirt! <span class="badge badge-primary"><?php 
+          <p class="lead">At 50k orders we'll start shipping your idol t-shirt! <span class="badge badge-primary"><?php 
           echo $tshirtLeft . ' left!';
           ?></span></p>
         </div>
@@ -93,7 +93,7 @@
               style="width: <?php
               echo $progress . '%'; ?>"> 
               <?php 
-              echo $tshirtNumber . ' tshirt preordered!' ; 
+              echo $tshirtNumber . ' t-shirts preordered!' ; 
               ?>
               </div>
             </div>
